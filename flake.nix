@@ -11,13 +11,15 @@
       nixpkgs.url = "github:NixOS/nixpkgs/nixos-21.05";
       nixpkgs-master.url = "github:NixOS/nixpkgs/master";
       nixpkgs-latest.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-      neomat.url = "github:matdsoupe/neomat";
+      # my personal neovim
+      copper.url = "github:zoedsoupe/copper";
       emacs = {
         url = "github:nix-community/emacs-overlay";
         inputs.nixpkgs.follows = "master";
       };
-      emacsmat = {
-        url = "github:matdsoupe/emacsmat";
+      # my personal emacs
+      aqua = {
+        url = "github:zoedsoupe/aqua";
         flake = false;
       };
     };
@@ -29,7 +31,7 @@
       nixpkgs-latest
       home-manager
       unstable
-      neomat
+      copper
     ;
     inherit (pkgs.lib) nixosSystem;
     inherit (builtins) toString trace;
@@ -49,8 +51,8 @@
     };
 
     global = rec {
-      username = "matdsoupe";
-      email = "matheus_pessanha2001@outlook.com";
+      username = "zoedsoupe";
+      email = "zoey.spessanha@outlook.com";
       selected-desktop-environment = "gnome";
       rootPath = builtins.toString ./.;
       rooPathNix = rootPath;

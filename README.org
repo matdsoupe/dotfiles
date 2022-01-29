@@ -1,5 +1,5 @@
-#+author: Matheus de Souza Pessanha
-#+email: mdsp@boosting.tech
+#+author: Zoey de Souza Pessanha
+#+email: zoey.spessanha@outlook.com
 
 #+begin_html
 <h1 align="center">
