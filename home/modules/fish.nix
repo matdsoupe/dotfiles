@@ -28,6 +28,9 @@ let
     prettyjson = "python -m json.tool | bat";
     d = "rm -rf $argv";
     please = "sudo $argv";
+    "..." = "cd ../../";
+    nvim = "nix run github:zoedsoupe/copper#nvim.";
+    vim = "nix run github:zoedsoupe/copper#nvim.";
   };
 
   base = ''
@@ -47,7 +50,7 @@ let
     function __direnv_export_eval --on-event fish_prompt;
         begin;
             begin;
-                "/etc/profiles/per-user/matdsoupe/bin/direnv" export fish
+                "/etc/profiles/per-user/zoedsoupe/bin/direnv" export fish
             end 1>| source
         end 2>| egrep -v -e "^direnv: export"
     end;
